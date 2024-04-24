@@ -3,8 +3,12 @@ import styled from "styled-components";
 export const StyledAgencySelection = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
-  background: #C0C0C0
+  background: #ececec;
+  padding: 10px;
+  border-radius: 8px;
+  &:hover {
+    border: 2px solid blue;
+  }
 `;
 
 export const StyledIcon = styled.div`
@@ -20,10 +24,14 @@ export const StyledContent = styled.div`
 export const StyledTitle = styled.h2`
   font-size: 18px;
   margin-bottom: 8px;
+  color: #000;
+  &:hover {
+    color: #00f;
+    text-decoration: underline;
+  }
 `;
 
 export const StyledHeading = styled.p`
   font-size: 14px;
   color: #555;
 `;
-

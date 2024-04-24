@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image"; 
+import Image from "next/image";
 import {
   StyledAgencySelection,
   StyledIcon,
@@ -11,10 +11,16 @@ import {
 interface AgencyChoiceProps {
   title: string;
   heading: string;
-  icon: { src: string; alt: string }; 
+  icon: IconProps;
+}
+interface IconProps {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
 }
 
-const AgencyChoice: React.FC<AgencyChoiceProps> = ({
+export const AgencyChoice: React.FC<AgencyChoiceProps> = ({
   title,
   heading,
   icon,
@@ -22,7 +28,13 @@ const AgencyChoice: React.FC<AgencyChoiceProps> = ({
   return (
     <StyledAgencySelection>
       <StyledIcon>
-        <Image src={icon.src} alt={icon.alt} width={100} height={100} />
+        <Image
+          layout="responsive"
+          src={icon.src}
+          alt={icon.alt}
+          width={icon.width}
+          height={icon.height}
+        />
       </StyledIcon>
       <StyledContent>
         <StyledTitle>{title}</StyledTitle>

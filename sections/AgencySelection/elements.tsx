@@ -43,9 +43,9 @@ export const StyledTextContainer = styled(({ ...props }) => <div {...props} />)`
   align-items: center
 `;
 
-// export const StyledCTAContainer = styled(({ ...props }) => <div {...props} />)`
-//   display: flex;
-// `;
+export const StyledCTAContainer = styled(({ ...props }) => <div {...props} />)`
+  display: flex;
+`;
 
 export const StyledImageContainer = styled(({ ...props }) => (
   <div {...props} />
@@ -54,5 +54,5 @@ export const StyledImageContainer = styled(({ ...props }) => (
   max-height: 65rem;
   width: 100%;
   height: 100%;
-  margin-left: auto;
+  margin-top: 5%
 `;

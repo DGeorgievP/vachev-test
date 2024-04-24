@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import { Hero } from "../sections";
 import { AgencySelection } from "../sections/AgencySelection";
 
@@ -11,7 +12,7 @@ const heroProps = {
 const agencySelectionProps = {
   title: "Managed Agency Selection",
   heading: "Start Your Onboarding Process",
-  image: { src: "/img/video.png", alt: "", width: 1000, height: 1680 },
+  icon: { src: "/img/video.png", alt: "", width: 1000, height: 1680 },
 }
 
 export default function Home() {
