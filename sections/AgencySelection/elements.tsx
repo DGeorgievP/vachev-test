@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import {
-  Button,
   SectionContainer,
   SectionBigHeading,
   SectionSubheading,
@@ -11,20 +10,23 @@ import React from "react";
 export const StyledContainer = styled(({ height, ...props }) => (
   <SectionContainer {...props} />
 ))`
-  align-items: center;
+  display: flex;
+  flex-direction: column;
 `;
 
-export const StyledGetStartedBtn = styled((props) => (
-  <Button {...props} variant="contained" color="main" />
-))`
-  margin-top: 4.375rem;
-  padding-top: 0;
-  padding-bottom: 0;
-`;
+// export const StyledGetStartedBtn = styled((props) => (
+//   <Button {...props} variant="contained" color="main" />
+// ))`
+//   margin-top: 4.375rem;
+//   padding-top: 0;
+//   padding-bottom: 0;
+// `;
 
 export const StyledTitle = styled((props) => <SectionBigHeading {...props} />)`
-  margin: 0;
+  display: flex;
+  flex-direction: row;
   color: black;
+  white-space: nowrap;
 `;
 
 export const StyledDescription = styled((props) => (
@@ -38,11 +40,12 @@ export const StyledTextContainer = styled(({ ...props }) => <div {...props} />)`
   width: 30%;
   margin-left: 11.125rem;
   font-family: sans-serif;
+  align-items: center
 `;
 
-export const StyledCTAContainer = styled(({ ...props }) => <div {...props} />)`
-  display: flex;
-`;
+// export const StyledCTAContainer = styled(({ ...props }) => <div {...props} />)`
+//   display: flex;
+// `;
 
 export const StyledImageContainer = styled(({ ...props }) => (
   <div {...props} />
