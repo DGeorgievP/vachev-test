@@ -13,6 +13,9 @@ export const StyledContainer = styled(({ height, ...props }) => (
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url('/img/background.png');
+  background-size: cover; 
+  background-position: center; 
 `;
 
 export const StyledTitle = styled((props) => <SectionBigHeading {...props} />)`

@@ -12,31 +12,34 @@ import AgencyChoice from "../../components/AgencyChoice/AgencyChoice.tsx";
 interface AgencySelectionProps {
   title: string;
   heading: string;
-  icon: HTMLImageElement
+  icon: HTMLImageElement;
 }
 
 const agencyChoiceBriefProps = {
   title: "Brief",
-  heading: "Complete brief writing or simple guidance on what to include, we've got you covered.",
+  heading:
+    "Complete brief writing or simple guidance on what to include, we've got you covered.",
   icon: { src: "/img/brief.png", alt: "", width: 20, height: 20 },
-}
+};
 
 const agencyChoiceSearchProps = {
   title: "Search",
-  heading: "In-depth agency search covering; criteria matching, door knocking and due-diligence vetting.",
+  heading:
+    "In-depth agency search covering; criteria matching, door knocking and due-diligence vetting.",
   icon: { src: "/img/search.png", alt: "", width: 20, height: 20 },
-}
+};
 
 const agencyChoicePitchProps = {
   title: "Pitch",
-  heading: "Comprehensive pitch management, including comms, diary management and pitch hosting.",
+  heading:
+    "Comprehensive pitch management, including comms, diary management and pitch hosting.",
   icon: { src: "/img/pitch.png", alt: "", width: 20, height: 20 },
-}
+};
 
 export const AgencySelection: React.FC<AgencySelectionProps> = ({
   title,
   heading,
-  icon
+  icon,
 }) => {
   return (
     <StyledContainer>
@@ -44,9 +47,16 @@ export const AgencySelection: React.FC<AgencySelectionProps> = ({
         <StyledTitle>{title}</StyledTitle>
         <StyledDescription>{heading}</StyledDescription>
       </StyledTextContainer>
-      <div style={{ display: "flex", flexDirection: "row", gap: "50px", width: "60%" }}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          gap: "50px",
+          width: "60%",
+        }}
+      >
         <StyledImageContainer>
-        <Image
+          <Image
             layout="responsive"
             src={icon.src}
             alt={icon.alt}
@@ -54,16 +64,22 @@ export const AgencySelection: React.FC<AgencySelectionProps> = ({
             height={icon.height}
           />
         </StyledImageContainer>
-        <div style={{ display: "flex", flexDirection: "column", gap: "100px",justifyContent: "center",  }}>
-          <AgencyChoice
-            {...agencyChoiceBriefProps}
-          />
-           <AgencyChoice
-            {...agencyChoiceSearchProps}
-          />
-           <AgencyChoice
-           {...agencyChoicePitchProps}
-          />  
+        <div
+          style={{
+            display: "flex",
+            width: "100%",
+            flexDirection: "column",
+            gap: "100px",
+            justifyContent: "center",
+          }}
+        >
+          <div style={{ display: "flex", width: "80%" }}>
+            <AgencyChoice {...agencyChoiceBriefProps} />
+          </div>
+          <div style={{ display: "flex", width: "90%" }}>
+            <AgencyChoice {...agencyChoiceSearchProps} />
+          </div>
+          <AgencyChoice {...agencyChoicePitchProps} />
         </div>
       </div>
     </StyledContainer>

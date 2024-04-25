@@ -22,9 +22,8 @@ export const StyledContent = styled.div`
   width: 100%
   height: 100%
   display: -webkit-box;
-   -webkit-line-clamp: 2; 
-           
-   
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
 `;
 
 export const StyledTitle = styled.h2`
