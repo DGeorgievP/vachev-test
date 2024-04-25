@@ -52,7 +52,7 @@ export const AgencySelection: React.FC<AgencySelectionProps> = ({
           display: "flex",
           flexDirection: "row",
           gap: "50px",
-          width: "60%",
+          width: "55%",
         }}
       >
         <StyledImageContainer>
