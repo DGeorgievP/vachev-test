@@ -21,6 +21,10 @@ export const StyledContent = styled.div`
   flex: 1;
   width: 100%
   height: 100%
+  display: -webkit-box;
+   -webkit-line-clamp: 2; 
+           
+   
 `;
 
 export const StyledTitle = styled.h2`

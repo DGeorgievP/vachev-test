@@ -11,7 +11,7 @@ const heroProps = {
 
 const agencySelectionProps = {
   title: "Managed Agency Selection",
-  heading: "Start Your Onboarding Process",
+  heading: "Strengthen your onboarding process",
   icon: { src: "/img/video.png", alt: "", width: 1000, height: 1680 },
 }
 

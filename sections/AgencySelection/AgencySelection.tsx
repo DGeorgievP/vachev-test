@@ -44,7 +44,7 @@ export const AgencySelection: React.FC<AgencySelectionProps> = ({
         <StyledTitle>{title}</StyledTitle>
         <StyledDescription>{heading}</StyledDescription>
       </StyledTextContainer>
-      <div style={{ display: "flex", flexDirection: "row", gap: "20px" }}>
+      <div style={{ display: "flex", flexDirection: "row", gap: "50px", width: "60%" }}>
         <StyledImageContainer>
         <Image
             layout="responsive"
@@ -54,7 +54,7 @@ export const AgencySelection: React.FC<AgencySelectionProps> = ({
             height={icon.height}
           />
         </StyledImageContainer>
-        <div style={{ display: "flex", flexDirection: "column", gap: "20px",justifyContent: "center",  }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "100px",justifyContent: "center",  }}>
           <AgencyChoice
             {...agencyChoiceBriefProps}
           />
