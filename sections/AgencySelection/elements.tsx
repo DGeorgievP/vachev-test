@@ -27,12 +27,13 @@ export const StyledTitle = styled((props) => <SectionBigHeading {...props} />)`
   flex-direction: row;
   color: black;
   white-space: nowrap;
+  align-items: center
 `;
 
 export const StyledDescription = styled((props) => (
   <SectionSubheading {...props} />
 ))`
-  margin: 1.563rem 0 0;
+  padding-bottom: 5%
 `;
 
 export const StyledTextContainer = styled(({ ...props }) => <div {...props} />)`

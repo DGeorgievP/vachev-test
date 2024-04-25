@@ -4,7 +4,7 @@ export const StyledAgencySelection = styled.div`
   display: flex;
   align-items: center;
   background: #ececec;
-  padding: 10px;
+  padding: 40px;
   border-radius: 8px;
   &:hover {
     border: 2px solid blue;
@@ -19,6 +19,8 @@ export const StyledIcon = styled.div`
 
 export const StyledContent = styled.div`
   flex: 1;
+  width: 100%
+  height: 100%
 `;
 
 export const StyledTitle = styled.h2`

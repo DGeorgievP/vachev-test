@@ -18,19 +18,19 @@ interface AgencySelectionProps {
 const agencyChoiceBriefProps = {
   title: "Brief",
   heading: "Complete brief writing or simple guidance on what to include, we've got you covered.",
-  icon: { src: "/img/brief.png", alt: "", width: 10, height: 16 },
+  icon: { src: "/img/brief.png", alt: "", width: 20, height: 20 },
 }
 
 const agencyChoiceSearchProps = {
   title: "Search",
   heading: "In-depth agency search covering; criteria matching, door knocking and due-diligence vetting.",
-  icon: { src: "/img/search.png", alt: "", width: 10, height: 16 },
+  icon: { src: "/img/search.png", alt: "", width: 20, height: 20 },
 }
 
 const agencyChoicePitchProps = {
   title: "Pitch",
   heading: "Comprehensive pitch management, including comms, diary management and pitch hosting.",
-  icon: { src: "/img/pitch.png", alt: "", width: 10, height: 16 },
+  icon: { src: "/img/pitch.png", alt: "", width: 20, height: 20 },
 }
 
 export const AgencySelection: React.FC<AgencySelectionProps> = ({
@@ -54,7 +54,7 @@ export const AgencySelection: React.FC<AgencySelectionProps> = ({
             height={icon.height}
           />
         </StyledImageContainer>
-        <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "20px",justifyContent: "center",  }}>
           <AgencyChoice
             {...agencyChoiceBriefProps}
           />
