@@ -9,12 +9,14 @@ export const StyledAgencySelection = styled.div`
   &:hover {
     border: 2px solid blue;
   }
+  
 `;
 
 export const StyledIcon = styled.div`
   width: 40px;
   height: 40px;
   margin-right: 20px;
+ 
 `;
 
 export const StyledContent = styled.div`
@@ -24,6 +26,7 @@ export const StyledContent = styled.div`
   display: -webkit-box;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
+  
 `;
 
 export const StyledTitle = styled.h2`
@@ -33,10 +36,13 @@ export const StyledTitle = styled.h2`
   &:hover {
     color: #00f;
     text-decoration: underline;
+    cursor: default;
   }
+  
 `;
 
 export const StyledHeading = styled.p`
   font-size: 14px;
   color: #555;
+  
 `;

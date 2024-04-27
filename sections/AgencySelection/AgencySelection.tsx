@@ -4,6 +4,7 @@ import {
   StyledTextContainer,
   StyledDescription,
   StyledTitle,
+  ChoiceAndImageContainer,
 } from "./elements.tsx";
 import Image from "next/image";
 import React from "react";
@@ -47,14 +48,7 @@ export const AgencySelection: React.FC<AgencySelectionProps> = ({
         <StyledTitle>{title}</StyledTitle>
         <StyledDescription>{heading}</StyledDescription>
       </StyledTextContainer>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          gap: "50px",
-          width: "55%",
-        }}
-      >
+      <ChoiceAndImageContainer>
         <StyledImageContainer>
           <Image
             layout="responsive"
@@ -73,15 +67,11 @@ export const AgencySelection: React.FC<AgencySelectionProps> = ({
             justifyContent: "center",
           }}
         >
-          <div style={{ display: "flex", width: "80%" }}>
-            <AgencyChoice {...agencyChoiceBriefProps} />
-          </div>
-          <div style={{ display: "flex", width: "90%" }}>
-            <AgencyChoice {...agencyChoiceSearchProps} />
-          </div>
+          <AgencyChoice {...agencyChoiceBriefProps} />
+          <AgencyChoice {...agencyChoiceSearchProps} />
           <AgencyChoice {...agencyChoicePitchProps} />
         </div>
-      </div>
+      </ChoiceAndImageContainer>
     </StyledContainer>
   );
 };

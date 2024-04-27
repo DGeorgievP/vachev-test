@@ -22,6 +22,17 @@ export const StyledContainer = styled(({ height, ...props }) => (
   }
 `;
 
+export const ChoiceAndImageContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  width: 55%;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    width: 100%;
+  }
+`;
+
 export const StyledTitle = styled((props) => <SectionBigHeading {...props} />)`
   display: flex;
   color: black;
@@ -29,7 +40,8 @@ export const StyledTitle = styled((props) => <SectionBigHeading {...props} />)`
   align-items: center;
   justify-content: center;
   @media (max-width: 1024px) {
-    width: 100%;
+    align-items: center;
+    width: 110%
   }
 `;
 
@@ -40,9 +52,6 @@ export const StyledDescription = styled((props) => (
   padding-bottom: 2%;
   align-items: center;
   justify-content: center;
-  @media (max-width: 1024px) {
-    width: 100%;
-  }
 `;
 
 export const StyledTextContainer = styled(({ ...props }) => <div {...props} />)`
@@ -50,7 +59,8 @@ export const StyledTextContainer = styled(({ ...props }) => <div {...props} />)`
   width: 30%;
   font-family: sans-serif;
   @media (max-width: 1024px) {
-    width: 100%;
+    align-items: center;
+    width: 100%
   }
 `;
 
@@ -59,7 +69,4 @@ export const StyledImageContainer = styled(({ ...props }) => (
 ))`
   width: 100%;
   height: 100%;
-  @media (max-width: 1024px) {
-    width: 100%;
-  }
 `;
