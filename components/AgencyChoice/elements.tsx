@@ -6,6 +6,8 @@ export const StyledAgencySelection = styled.div`
   background: #ececec;
   padding: 40px;
   border-radius: 8px;
+  border: 2px solid transparent; 
+  transition: border-color 0.3s ease; 
   &:hover {
     border: 2px solid blue;
   }
