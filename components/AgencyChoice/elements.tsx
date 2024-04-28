@@ -38,13 +38,6 @@ export const StyledTitle = styled.h2`
   &:hover {
     color: #00f;
     text-decoration: underline;
-    cursor: default;
+    cursor: pointer;
   }
-  
-`;
-
-export const StyledHeading = styled.p`
-  font-size: 14px;
-  color: #555;
-  
 `;

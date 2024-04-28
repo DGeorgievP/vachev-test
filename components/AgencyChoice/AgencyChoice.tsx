@@ -5,12 +5,11 @@ import {
   StyledIcon,
   StyledContent,
   StyledTitle,
-  StyledHeading,
 } from "./elements.tsx";
 
-interface AgencyChoiceProps {
+export interface AgencyChoiceProps {
   title: string;
-  heading: string;
+  heading: string | JSX.Element;
   icon: IconProps;
 }
 interface IconProps {
@@ -38,7 +37,7 @@ export const AgencyChoice: React.FC<AgencyChoiceProps> = ({
       </StyledIcon>
       <StyledContent>
         <StyledTitle>{title}</StyledTitle>
-        <StyledHeading>{heading}</StyledHeading>
+        {heading}
       </StyledContent>
     </StyledAgencySelection>
   );

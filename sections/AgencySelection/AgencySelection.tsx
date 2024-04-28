@@ -8,39 +8,20 @@ import {
 } from "./elements.tsx";
 import Image from "next/image";
 import React from "react";
-import AgencyChoice from "../../components/AgencyChoice/AgencyChoice.tsx";
+import AgencyChoice, { AgencyChoiceProps } from "../../components/AgencyChoice/AgencyChoice.tsx";
 
 interface AgencySelectionProps {
-  title: string;
-  heading: string;
-  icon: HTMLImageElement;
+  title: string,
+  heading: string,
+  icon: HTMLImageElement,
+  agencyChoiceCards: AgencyChoiceProps[],
 }
-
-const agencyChoiceBriefProps = {
-  title: "Brief",
-  heading:
-    "Complete brief writing or simple guidance on what to include, we've got you covered.",
-  icon: { src: "/img/brief.png", alt: "", width: 20, height: 20 },
-};
-
-const agencyChoiceSearchProps = {
-  title: "Search",
-  heading:
-    "In-depth agency search covering; criteria matching, door knocking and due-diligence vetting.",
-  icon: { src: "/img/search.png", alt: "", width: 20, height: 20 },
-};
-
-const agencyChoicePitchProps = {
-  title: "Pitch",
-  heading:
-    "Comprehensive pitch management, including comms, diary management and pitch hosting.",
-  icon: { src: "/img/pitch.png", alt: "", width: 20, height: 20 },
-};
 
 export const AgencySelection: React.FC<AgencySelectionProps> = ({
   title,
   heading,
   icon,
+  agencyChoiceCards,
 }) => {
   return (
     <StyledContainer>
@@ -63,13 +44,13 @@ export const AgencySelection: React.FC<AgencySelectionProps> = ({
             display: "flex",
             width: "100%",
             flexDirection: "column",
-            gap: "100px",
+            gap: "45px",
             justifyContent: "center",
           }}
         >
-          <AgencyChoice {...agencyChoiceBriefProps} />
-          <AgencyChoice {...agencyChoiceSearchProps} />
-          <AgencyChoice {...agencyChoicePitchProps} />
+          {agencyChoiceCards && agencyChoiceCards.map((agencyChoiceCard: AgencyChoiceProps, key: number) => (
+            <AgencyChoice key={key} {...agencyChoiceCard} />
+          ))}
         </div>
       </ChoiceAndImageContainer>
     </StyledContainer>

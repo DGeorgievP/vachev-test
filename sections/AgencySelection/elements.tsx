@@ -15,7 +15,7 @@ export const StyledContainer = styled(({ height, ...props }) => (
   align-items: center;
   background-image: url('/img/background.png');
   background-size: cover; 
-  background-position: center; 
+  background-position: center;
   @media (max-width: 1024px) {
     width: 100%;
     padding: 30%; 
